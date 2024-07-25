@@ -4,7 +4,13 @@ import Nav from "./Nav";
 import InputArea from "./InputArea";
 
 function App() {
-  let [item, setItem] = useState([]);
+  let [item, setItem] = useState( () => {
+    const set = localStorage.getItem("todo");
+    const data = JSON.parse(set);
+    return data || []
+  });
+
+  localStorage.setItem("todo", JSON.stringify(item))
 
   function done(e, value) {
     e.preventDefault();
