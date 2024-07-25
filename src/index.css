@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: #f1ab66;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  padding: 2%;
+}
+
+.App {
+  padding: 2%;
+  background: url(/todo-list/images/background.jpg);
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 2.8px 2px 10px rgb(58, 58, 58);
+  min-height: 400px;
+}
+
+.nav {
+  list-style: none;
+  padding: 2%;
+  text-align: end;
+  cursor: pointer;
+}
+
+.App > li {
+  font-family: "Roboto", sans-serif !important;
+  font-style: normal !important;
+  font-weight: 500;
+  padding: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 1%;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(65, 65, 65);
+  transform: rotate(5deg);
+  font-size: 40px;
+  padding: 1rem;
+  margin-bottom: 3%;
+  span {
+    padding: 0.2% 5px;
+    border-radius: 5px;
+    color: rgb(172, 172, 172);
+    background: linear-gradient(to right, rgb(247, 176, 46), yellow);
+  }
+  transition: transform 1s linear;
+}
+
+h1:hover {
+  transform: rotate(-5deg);
+}
+
+form {
+  justify-content: center;
+  display: flex;
+  gap: 015px;
+  padding: 1rem;
+  margin-bottom: 3%;
+}
+
+form > input {
+  border: none;
+  border-bottom: 4px dashed #ffa600;
+  background: transparent;
+  font-size: large;
+}
+
+input::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+form input:focus {
+  outline: 5px solid rgb(148, 148, 221);
+}
+
+form > button {
+  padding: 5px 7px;
+  background: #ffffff;
+  border: 2.5px solid rgb(12, 12, 12);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  margin-left: 5%;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+.todo {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 5px !important;
+  padding-bottom: 0 !important;
+}
+
+.totalTodo {
+  padding-bottom: 0 !important;
+  margin: 0;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.item {
+  display: flex;
+  padding-left: 5%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.toggle {
+  display: flex;
+  gap: 20px;
+}
+
+.click {
+  border: 5px solid #e08133;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #e08133;
+}
+
+.dark {
+  background-image: url(/todo-list/images/black.png);
+  color: white;
+  box-shadow: 2.8px 2px 10px rgb(255, 255, 255);
+
+  input {
+    border-bottom: 4px dashed #ffffff;
+  }
+  input:focus {
+    outline: 5px solid rgb(215, 215, 234);
+  }
+  input::placeholder {
+    color: #ffffff;
+  }
+  form > button {
+    border-color: white;
+    background-color: black;
+    color: white;
+  }
+
+  h1 > span {
+    color: aliceblue;
+    background: linear-gradient(to right, rgb(79, 71, 55), rgb(3, 3, 3));
+  }
+}
